@@ -31,7 +31,7 @@ def write(path, content):
 
 UPDATED_JA = "2026年10月23日"
 UPDATED_EN = "October 23, 2026"
-MAIL = "inovel.ryo@gmail.com"
+MAIL = "minamia.works@gmail.com"
 
 # ---------- 日本語 ----------
 ja_privacy = f"""  <h1>プライバシーポリシー</h1>
