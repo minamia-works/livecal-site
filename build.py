@@ -78,7 +78,7 @@ ja_privacy = f"""  <h1>プライバシーポリシー</h1>
   <h2>4. 保存期間と削除</h2>
   <ul>
     <li>端末から 90 日間連絡がない場合、サーバーはその端末の情報を自動で削除します。</li>
-    <li>アプリの「設定 → このアプリについて → サーバーのデータを削除」で、いつでも、サーバーの情報をすぐに削除できます。削除すると、Live Activity は一時停止になり、再開するまで、サーバーには何も送りません。</li>
+    <li>サーバーの情報の削除を希望する場合は、下の連絡先にご連絡ください。端末の識別子（アプリの端末内に保存されるランダムな値）が必要になるため、ご本人の確認ができる範囲で対応します。確認が難しい場合も、アプリを削除したうえで 90 日経てば、自動で削除されます。</li>
     <li>アプリをアンインストールした場合も、サーバーの情報は、上の 90 日が過ぎると自動で削除されます。</li>
   </ul>
 
@@ -202,7 +202,7 @@ ja_support = f"""  <h1>サポート</h1>
   <p>iOS の仕様で、1 つのアプリが同時に出せる Live Activity は 5 枚までです。先の予定は、手前の予定が終わったあとに出ます。</p>
 
   <h2>データの削除</h2>
-  <p>アプリの「設定 → このアプリについて → サーバーのデータを削除」で、サーバーが預かっている情報（端末の宛先と、通知の時刻）を削除できます。詳しくは、<a href="../privacy/">プライバシーポリシー</a>をご覧ください。</p>
+  <p>サーバーが預かっている情報（端末の宛先と、通知の時刻）は、アプリを削除して 90 日経つと、自動で削除されます。早く削除したいときは、下のメールアドレスまでご連絡ください。詳しくは、<a href="../privacy/">プライバシーポリシー</a>をご覧ください。</p>
 
   <h2>お問い合わせ</h2>
   <p>解決しないときは、下のメールアドレスまでご連絡ください。機種名・iOS のバージョン・状況を添えていただけると助かります。予定の内容は、書かなくて大丈夫です。</p>
@@ -256,7 +256,7 @@ en_privacy = f"""  <h1>Privacy Policy</h1>
   <h2>4. Retention and deletion</h2>
   <ul>
     <li>If a device has not contacted the server for 90 days, the server deletes its information automatically.</li>
-    <li>In the App, "Settings → About → Delete server data" deletes the information on the server immediately. Live Activities are then paused, and nothing is sent to the server until you resume.</li>
+    <li>To have the server information deleted, please contact us at the address below. Deletion needs the device identifier (a random value stored inside the App), so we will help as far as we can verify it is yours. If that is difficult, deleting the App and waiting 90 days also removes the information automatically.</li>
     <li>If you uninstall the App, the server information is deleted automatically after the 90 days above.</li>
   </ul>
 
@@ -380,7 +380,7 @@ en_support = f"""  <h1>Support</h1>
   <p>iOS lets one app show at most 5 Live Activities at once. Later events appear after earlier ones end.</p>
 
   <h2>Deleting your data</h2>
-  <p>In the app, "Settings → About → Delete server data" deletes what the server holds (your device's push addresses and notification times). See the <a href="../privacy/">Privacy Policy</a> for details.</p>
+  <p>What the server holds (your device's push addresses and notification times) is deleted automatically 90 days after you delete the app. To have it removed sooner, please email us. See the <a href="../privacy/">Privacy Policy</a> for details.</p>
 
   <h2>Contact</h2>
   <p>If this doesn't solve it, please email us. Including your device model, iOS version, and what happened helps. You don't need to include any event details.</p>
