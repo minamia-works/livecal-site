@@ -16,7 +16,7 @@ def page(lang, title, body, back_href, back_label):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{html.escape(title)} | LiveCal</title>
+<title>{html.escape(title)} | NextCal</title>
 <style>{CSS}</style>
 </head>
 <body>
@@ -37,7 +37,7 @@ MAIL = "minamia.works@gmail.com"
 ja_privacy = f"""  <h1>プライバシーポリシー</h1>
   <p class="updated">最終更新日：{UPDATED_JA}</p>
 
-  <p>minamia-works（以下「当方」）は、iOSアプリケーション「LiveCal」（以下「本アプリ」）における情報の取り扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定めます。</p>
+  <p>minamia-works（以下「当方」）は、iOSアプリケーション「NextCal」（以下「本アプリ」）における情報の取り扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定めます。</p>
 
   <hr>
   <h2>1. 要点</h2>
@@ -126,7 +126,7 @@ ja_privacy = f"""  <h1>プライバシーポリシー</h1>
 ja_terms = f"""  <h1>利用規約</h1>
   <p class="updated">最終更新日：{UPDATED_JA}</p>
 
-  <p>この利用規約（以下「本規約」）は、minamia-works（以下「当方」）が提供するiOSアプリケーション「LiveCal」（以下「本アプリ」）の利用条件を定めるものです。本アプリを利用することで、本規約に同意したものとみなします。</p>
+  <p>この利用規約（以下「本規約」）は、minamia-works（以下「当方」）が提供するiOSアプリケーション「NextCal」（以下「本アプリ」）の利用条件を定めるものです。本アプリを利用することで、本規約に同意したものとみなします。</p>
 
   <hr>
   <h2>1. 本アプリについて</h2>
@@ -190,11 +190,11 @@ ja_support = f"""  <h1>サポート</h1>
 
   <h2>Live Activity が出ないとき</h2>
   <ul>
-    <li><strong>許可を確認</strong>：iPhone の「設定」で、LiveCal の「カレンダー（フルアクセス）」「通知」「ライブアクティビティ」が、すべてオンか確認してください。アプリの設定画面の「アクセス」にも、状態が出ます。</li>
+    <li><strong>許可を確認</strong>：iPhone の「設定」で、NextCal の「カレンダー（フルアクセス）」「通知」「ライブアクティビティ」が、すべてオンか確認してください。アプリの設定画面の「アクセス」にも、状態が出ます。</li>
     <li><strong>一時停止になっていないか</strong>：アプリのホーム右下のボタンが、再生（▶）なら、一時停止中です。押すと、再開します。</li>
     <li><strong>表示のタイミング</strong>：予定の何分前から出すかは、アプリの設定の「表示のタイミング」で決めます。範囲より先の予定は、出ません。</li>
     <li><strong>終日の予定</strong>：初期設定では、含めていません。設定の「終日の予定を含める」で変えられます。</li>
-    <li><strong>iPhone を再起動したあと</strong>：LiveCal を 1 回開いてください。</li>
+    <li><strong>iPhone を再起動したあと</strong>：NextCal を 1 回開いてください。</li>
     <li><strong>予定を追加・変更したのに反映されない</strong>：アプリを閉じている間の変更は、アプリが次に動くまで、反映が遅れることがあります。アプリを開くと、すぐ反映されます。</li>
   </ul>
 
@@ -215,7 +215,7 @@ ja_support = f"""  <h1>サポート</h1>
 en_privacy = f"""  <h1>Privacy Policy</h1>
   <p class="updated">Last updated: {UPDATED_EN}</p>
 
-  <p>minamia-works ("we") provides the iOS app "LiveCal" (the "App"). This policy explains how information is handled in the App.</p>
+  <p>minamia-works ("we") provides the iOS app "NextCal" (the "App"). This policy explains how information is handled in the App.</p>
 
   <hr>
   <h2>1. Summary</h2>
@@ -304,7 +304,7 @@ en_privacy = f"""  <h1>Privacy Policy</h1>
 en_terms = f"""  <h1>Terms of Use</h1>
   <p class="updated">Last updated: {UPDATED_EN}</p>
 
-  <p>These Terms of Use (the "Terms") set the conditions for using the iOS app "LiveCal" (the "App") provided by minamia-works ("we"). By using the App you agree to these Terms.</p>
+  <p>These Terms of Use (the "Terms") set the conditions for using the iOS app "NextCal" (the "App") provided by minamia-works ("we"). By using the App you agree to these Terms.</p>
 
   <hr>
   <h2>1. About the App</h2>
@@ -368,11 +368,11 @@ en_support = f"""  <h1>Support</h1>
 
   <h2>If a Live Activity doesn't appear</h2>
   <ul>
-    <li><strong>Check permissions</strong>: in the iPhone Settings app, make sure LiveCal has Calendar (full access), Notifications, and Live Activities turned on. The Access section in the app's settings shows them too.</li>
+    <li><strong>Check permissions</strong>: in the iPhone Settings app, make sure NextCal has Calendar (full access), Notifications, and Live Activities turned on. The Access section in the app's settings shows them too.</li>
     <li><strong>Is it paused?</strong>: if the button at the bottom right of the Home screen shows play (▶), Live Activities are paused. Tap it to resume.</li>
     <li><strong>Timing</strong>: how many minutes before an event it appears is set in Settings → Timing. Events further away don't show.</li>
     <li><strong>All-day events</strong>: excluded by default. Turn on "Include all-day events" in Settings.</li>
-    <li><strong>After restarting your iPhone</strong>: open LiveCal once.</li>
+    <li><strong>After restarting your iPhone</strong>: open NextCal once.</li>
     <li><strong>You added or changed an event but nothing changed</strong>: changes made while the app is closed can take until the app next runs. Opening the app updates it right away.</li>
   </ul>
 
@@ -390,13 +390,13 @@ en_support = f"""  <h1>Support</h1>
   </ul>"""
 
 for lang, labels, pages in (
-    ("ja", ("LiveCal", {"privacy": ("プライバシーポリシー", ja_privacy), "terms": ("利用規約", ja_terms), "support": ("サポート", ja_support)}), None),
-    ("en", ("LiveCal", {"privacy": ("Privacy Policy", en_privacy), "terms": ("Terms of Use", en_terms), "support": ("Support", en_support)}), None),
+    ("ja", ("NextCal", {"privacy": ("プライバシーポリシー", ja_privacy), "terms": ("利用規約", ja_terms), "support": ("サポート", ja_support)}), None),
+    ("en", ("NextCal", {"privacy": ("Privacy Policy", en_privacy), "terms": ("Terms of Use", en_terms), "support": ("Support", en_support)}), None),
 ):
     for name, (title, body) in labels[1].items():
-        write(f"{lang}/{name}/index.html", page(lang, title, body, "../", "LiveCal"))
+        write(f"{lang}/{name}/index.html", page(lang, title, body, "../", "NextCal"))
     items = "\n".join(f'    <li><a href="{n}/">{t}</a></li>' for n, (t, _) in labels[1].items())
     tag = "iPhone のカレンダーの、これから始まる予定を、ロック画面と Dynamic Island に出すアプリ" if lang == "ja" else "Shows upcoming calendar events on your Lock Screen and in the Dynamic Island"
     other = '<p><a href="../en/">English</a></p>' if lang == "ja" else '<p><a href="../ja/">日本語</a></p>'
-    write(f"{lang}/index.html", page(lang, "LiveCal", f'  <h1>LiveCal</h1>\n  <p>{tag}</p>\n  <ul>\n{items}\n  </ul>\n  {other}', "../", "LiveCal").replace('<a class="back" href="../">← LiveCal</a>\n', ""))
-write("index.html", page("ja", "LiveCal", '  <h1>LiveCal</h1>\n  <ul>\n    <li><a href="ja/">日本語</a></li>\n    <li><a href="en/">English</a></li>\n  </ul>', "./", "LiveCal").replace('<a class="back" href="./">← LiveCal</a>\n', ""))
+    write(f"{lang}/index.html", page(lang, "NextCal", f'  <h1>NextCal</h1>\n  <p>{tag}</p>\n  <ul>\n{items}\n  </ul>\n  {other}', "../", "NextCal").replace('<a class="back" href="../">← NextCal</a>\n', ""))
+write("index.html", page("ja", "NextCal", '  <h1>NextCal</h1>\n  <ul>\n    <li><a href="ja/">日本語</a></li>\n    <li><a href="en/">English</a></li>\n  </ul>', "./", "NextCal").replace('<a class="back" href="./">← NextCal</a>\n', ""))
