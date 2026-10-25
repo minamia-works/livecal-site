@@ -40,7 +40,7 @@
     <tr><td>Push addresses (tokens)</td><td>Values Apple's push service (APNs) uses to deliver notifications to this device, for starting and updating Live Activities, among others.</td></tr>
     <tr><td>Times to send notifications</td><td>Times (Unix seconds) to start or end a Live Activity or wake the app, and a key to tell Live Activities apart (the event start time). <strong>They do not include event titles or any other event content.</strong></td></tr>
     <tr><td>On/off state</td><td>Whether you have paused Live Activities.</td></tr>
-    <tr><td>Contact log</td><td>The last time the device contacted the server, the number of unanswered notifications, and the type and time of notifications the server sent (not their content). Used to confirm operation and to send help notifications (when a Live Activity could not start, or updates stopped after a restart).</td></tr>
+    <tr><td>Contact log</td><td>The last time the device contacted the server, the number of unanswered notifications, and the type and time of notifications the server sent (not their content). Used to confirm operation and to send help notifications (when a Live Activity could not start).</td></tr>
   </table>
   <h3>Information we do not collect</h3>
   <ul>
@@ -54,7 +54,7 @@
   <h2>3. How we use information</h2>
   <ul>
     <li>To show Live Activities before an event starts and end them afterwards</li>
-    <li>To send help notifications when a display did not appear or updates stopped</li>
+    <li>To send help notifications when a display did not appear</li>
     <li>To operate the service reliably and investigate problems</li>
   </ul>
 
@@ -79,7 +79,7 @@
   <h2>6. Permissions</h2>
   <ul>
     <li><strong>Calendar (full access)</strong>: to read events and decide what to show. What it reads never leaves your device.</li>
-    <li><strong>Notifications</strong>: to send help notifications when an event starts, when a display could not start, or when updates stopped.</li>
+    <li><strong>Notifications</strong>: to detect events added or changed while the app is closed, the app receives a quiet notification (no screen wake-up, no sound, removed automatically) about every 5 minutes. An extension triggered by it reads the calendar on your device and sends only event start times to our server (never titles or other details). Notifications are also used to tell you when a display could not start. The app still works while open if you do not allow notifications.</li>
     <li><strong>Live Activities</strong>: to show on the Lock Screen and in the Dynamic Island.</li>
   </ul>
 

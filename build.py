@@ -56,7 +56,7 @@ ja_privacy = f"""  <h1>プライバシーポリシー</h1>
     <tr><td>通知の宛先（トークン）</td><td>Apple の通知サービス（APNs）が、この端末に通知を届けるための値です。表示の開始用・更新用など、複数あります。</td></tr>
     <tr><td>通知を送る時刻</td><td>Live Activity を始める・終わらせる・端末を起こす時刻（UNIX 秒）と、表示を見分けるための鍵（予定の開始時刻）です。<strong>予定の名前などの内容は含みません。</strong></td></tr>
     <tr><td>表示のオン・オフ</td><td>Live Activity を一時停止しているかどうかです。</td></tr>
-    <tr><td>連絡の記録</td><td>端末から最後に連絡があった時刻、応答のなかった通知の数、サーバーが送った通知の種類と時刻です。通知の内容は含みません。動作の確認と、案内の通知（開始できなかったとき、再起動後に更新が止まったとき）のために使います。</td></tr>
+    <tr><td>連絡の記録</td><td>端末から最後に連絡があった時刻、応答のなかった通知の数、サーバーが送った通知の種類と時刻です。通知の内容は含みません。動作の確認と、案内の通知（開始できなかったとき）のために使います。</td></tr>
   </table>
   <h3>収集しない情報</h3>
   <ul>
@@ -70,7 +70,7 @@ ja_privacy = f"""  <h1>プライバシーポリシー</h1>
   <h2>3. 情報の利用目的</h2>
   <ul>
     <li>予定の開始前に、ロック画面・Dynamic Island に Live Activity を表示し、開始後に消すため</li>
-    <li>表示が出なかったときや、更新が止まったときに、案内の通知を送るため</li>
+    <li>表示が出なかったときに、案内の通知を送るため</li>
     <li>サービスの安定した運営と、不具合の調査のため</li>
   </ul>
 
@@ -95,7 +95,7 @@ ja_privacy = f"""  <h1>プライバシーポリシー</h1>
   <h2>6. 端末の権限</h2>
   <ul>
     <li><strong>カレンダー（フルアクセス）</strong>：予定を読み取り、表示を決めるために使います。読み取った内容は、端末の外に送信しません。</li>
-    <li><strong>通知</strong>：予定が始まるとき、表示を開始できなかったとき、更新が止まったときの案内を送るために使います。</li>
+    <li><strong>通知</strong>：アプリを閉じている間に追加・変更された予定を検知するために、静かな通知（画面を点けず、音も出さず、通知センターに残らない通知）を約 5 分おきに受け取ります。この通知で動く拡張機能が、端末の中でカレンダーを読み、予定の開始時刻だけをサーバーに送ります（予定の名前などの内容は送りません）。また、表示を開始できなかったときの案内にも使います。通知を許可しなくても、アプリを開いている間は動作します。</li>
     <li><strong>Live Activity</strong>：ロック画面・Dynamic Island に表示するために使います。</li>
   </ul>
 
@@ -234,7 +234,7 @@ en_privacy = f"""  <h1>Privacy Policy</h1>
     <tr><td>Push addresses (tokens)</td><td>Values Apple's push service (APNs) uses to deliver notifications to this device, for starting and updating Live Activities, among others.</td></tr>
     <tr><td>Times to send notifications</td><td>Times (Unix seconds) to start or end a Live Activity or wake the app, and a key to tell Live Activities apart (the event start time). <strong>They do not include event titles or any other event content.</strong></td></tr>
     <tr><td>On/off state</td><td>Whether you have paused Live Activities.</td></tr>
-    <tr><td>Contact log</td><td>The last time the device contacted the server, the number of unanswered notifications, and the type and time of notifications the server sent (not their content). Used to confirm operation and to send help notifications (when a Live Activity could not start, or updates stopped after a restart).</td></tr>
+    <tr><td>Contact log</td><td>The last time the device contacted the server, the number of unanswered notifications, and the type and time of notifications the server sent (not their content). Used to confirm operation and to send help notifications (when a Live Activity could not start).</td></tr>
   </table>
   <h3>Information we do not collect</h3>
   <ul>
@@ -248,7 +248,7 @@ en_privacy = f"""  <h1>Privacy Policy</h1>
   <h2>3. How we use information</h2>
   <ul>
     <li>To show Live Activities before an event starts and end them afterwards</li>
-    <li>To send help notifications when a display did not appear or updates stopped</li>
+    <li>To send help notifications when a display did not appear</li>
     <li>To operate the service reliably and investigate problems</li>
   </ul>
 
@@ -273,7 +273,7 @@ en_privacy = f"""  <h1>Privacy Policy</h1>
   <h2>6. Permissions</h2>
   <ul>
     <li><strong>Calendar (full access)</strong>: to read events and decide what to show. What it reads never leaves your device.</li>
-    <li><strong>Notifications</strong>: to send help notifications when an event starts, when a display could not start, or when updates stopped.</li>
+    <li><strong>Notifications</strong>: to detect events added or changed while the app is closed, the app receives a quiet notification (no screen wake-up, no sound, removed automatically) about every 5 minutes. An extension triggered by it reads the calendar on your device and sends only event start times to our server (never titles or other details). Notifications are also used to tell you when a display could not start. The app still works while open if you do not allow notifications.</li>
     <li><strong>Live Activities</strong>: to show on the Lock Screen and in the Dynamic Island.</li>
   </ul>
 
