@@ -389,6 +389,55 @@ en_support = f"""  <h1>Support</h1>
     <li>Contact: <a href="mailto:{MAIL}">{MAIL}</a></li>
   </ul>"""
 
+HOME_JA = """  <h1>NextCal</h1>
+  <p>NextCal は、iPhone のカレンダーの「これから始まる予定」を、ロック画面と Dynamic Island の Live Activity に、カウントダウンつきで表示するアプリです。予定を見逃さないための、iPhone 専用の無料アプリです。</p>
+
+  <h2>できること</h2>
+  <ul>
+    <li>予定が近づくと、ロック画面と Dynamic Island に、自動で Live Activity が出て、始まると自動で消えます。毎日アプリを開いたり、ボタンを押したりする必要はありません。</li>
+    <li>開始時刻ごとに、別の Live Activity で、予定の名前とカウントダウンを表示します。同じ時刻に始まる複数の予定は、まとめて 1 枚に表示します。</li>
+    <li>通知を許可していれば、アプリを閉じていても、強制終了していても、新しく追加した予定を拾います（通知は目立たない形で送られます）。</li>
+    <li>iPhone のカレンダーアプリに入っているカレンダー（iCloud、Google など）を使います。使うカレンダーと、終日の予定を含めるかを、選べます。</li>
+  </ul>
+
+  <h2>プライバシー</h2>
+  <p>予定の内容（名前・場所・参加者・メモ）は、iPhone の外へ送信しません。詳しくは、<a href="privacy/">プライバシーポリシー</a>をご覧ください。</p>
+
+  <h2>リンク</h2>
+  <ul>
+%ITEMS%
+  </ul>
+  %OTHER%"""
+
+HOME_EN = """  <h1>NextCal</h1>
+  <p>NextCal is a free iPhone app that shows the next events in your Calendar as Live Activities on the Lock Screen and in the Dynamic Island, with a countdown, so you don't miss what's coming up.</p>
+
+  <h2>What it does</h2>
+  <ul>
+    <li>As an event approaches, a Live Activity appears on the Lock Screen and in the Dynamic Island on its own, and goes away by itself once the event starts. No daily taps or opening the app.</li>
+    <li>Each start time gets its own Live Activity with the event name and a countdown. Events that start at the same time are shown together on one card.</li>
+    <li>With notifications allowed, it picks up newly added events even when the app is closed or force-quit (the notifications are silent and unobtrusive).</li>
+    <li>It works with the calendars already in your iPhone's Calendar app (iCloud, Google, and more). You choose which calendars to use and whether to include all-day events.</li>
+  </ul>
+
+  <h2>Privacy</h2>
+  <p>Event contents (titles, locations, attendees, notes) never leave your iPhone. See the <a href="privacy/">Privacy Policy</a> for details.</p>
+
+  <h2>Links</h2>
+  <ul>
+%ITEMS%
+  </ul>
+  %OTHER%"""
+
+ROOT_HOME = """  <h1>NextCal</h1>
+  <p>NextCal は、iPhone のカレンダーの「これから始まる予定」を、ロック画面と Dynamic Island の Live Activity に、カウントダウンつきで表示するアプリです。予定の内容は、iPhone の外へ送信しません。</p>
+  <p>NextCal is a free iPhone app that shows your next Calendar events as Live Activities on the Lock Screen and in the Dynamic Island, with a countdown. Event contents never leave your iPhone.</p>
+  <ul>
+    <li><a href="ja/">日本語（概要・プライバシーポリシー・利用規約・サポート）</a></li>
+    <li><a href="en/">English (Overview, Privacy Policy, Terms, Support)</a></li>
+    <li><a href="ja/privacy/">プライバシーポリシー</a> / <a href="en/privacy/">Privacy Policy</a></li>
+  </ul>"""
+
 for lang, labels, pages in (
     ("ja", ("NextCal", {"privacy": ("プライバシーポリシー", ja_privacy), "terms": ("利用規約", ja_terms), "support": ("サポート", ja_support)}), None),
     ("en", ("NextCal", {"privacy": ("Privacy Policy", en_privacy), "terms": ("Terms of Use", en_terms), "support": ("Support", en_support)}), None),
@@ -396,7 +445,7 @@ for lang, labels, pages in (
     for name, (title, body) in labels[1].items():
         write(f"{lang}/{name}/index.html", page(lang, title, body, "../", "NextCal"))
     items = "\n".join(f'    <li><a href="{n}/">{t}</a></li>' for n, (t, _) in labels[1].items())
-    tag = "iPhone のカレンダーの、これから始まる予定を、ロック画面と Dynamic Island に出すアプリ" if lang == "ja" else "Shows upcoming calendar events on your Lock Screen and in the Dynamic Island"
     other = '<p><a href="../en/">English</a></p>' if lang == "ja" else '<p><a href="../ja/">日本語</a></p>'
-    write(f"{lang}/index.html", page(lang, "NextCal", f'  <h1>NextCal</h1>\n  <p>{tag}</p>\n  <ul>\n{items}\n  </ul>\n  {other}', "../", "NextCal").replace('<a class="back" href="../">← NextCal</a>\n', ""))
-write("index.html", page("ja", "NextCal", '  <h1>NextCal</h1>\n  <ul>\n    <li><a href="ja/">日本語</a></li>\n    <li><a href="en/">English</a></li>\n  </ul>', "./", "NextCal").replace('<a class="back" href="./">← NextCal</a>\n', ""))
+    home = HOME_JA if lang == "ja" else HOME_EN
+    write(f"{lang}/index.html", page(lang, "NextCal", home.replace("%ITEMS%", items).replace("%OTHER%", other), "../", "NextCal").replace('<a class="back" href="../">← NextCal</a>\n', ""))
+write("index.html", page("ja", "NextCal", ROOT_HOME, "./", "NextCal").replace('<a class="back" href="./">← NextCal</a>\n', ""))
